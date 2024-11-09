@@ -14,16 +14,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 <br>
 
-## __Sieb des Eratosthenes__ {.tabset .tabset-pills}
+# __Sieb des Eratosthenes__ {.tabset .tabset-pills}
 <br>
 
 
-### Primzahlen {.active}
+# Primzahlen {.active}
 <br>
 
-#### Eine Primzahl ist: 
-- Eine __natürliche Zahl__, die größer als 1 ist und _nur zwei Teiler hat_, nämlich __1 und die Zahl selbst__
 
+## Eine Primzahl ist: 
+<br>
+
+- <p><span style="font-size:1.5em">Eine __natürliche Zahl__, die größer als 1 ist und _nur zwei Teiler hat_, nämlich __1 und die Zahl selbst__</span></p>
+- <p><span style="font-size:1.5em"> Cant be written as a product of 2 smaller integers</span></p>
 
 
 <br>
@@ -34,21 +37,24 @@ knitr::opts_chunk$set(echo = TRUE)
 - Mit Ausnahme der __1__ ist jede natürliche Zahl entweder eine Primzahl oder zusammengesetzt.
 
 
-### Bedeutung
+# Bedeutung
 <br>
  
-#### Verschlüsselung 
-- Primfaktoren auch mit dem Aufkommen elektronischer Rechenmaschinen nicht effizient gefunden werden können. 
+#### Kryptography/Verschlüsselung 
+- Primfaktoren finden ist extrem rechenintensiv 
+- RSA Verschlüsselung
+        - Sicherheit im Internet
+        - Asymetrische Verschlüsselung (public vs private keys)
 
-
-### Funktionsweise
+# Funktionsweise
 <br>
 
+# __Sieb des Eratosthenes__
+## Algorhythmus zur Bestimmung aller Primzahlen in einem Zahlenraum
 
-#### Einfachster Algorhythmus zur Bestimmung aller Primzahlen in einem vorgegebenem Zahlenraum
-
-#### Bedeutung der Primzahlen 
-
+## Bedeutung der Primzahlen 
+* <p><span style="font-size:1.5em">This text should have a smaller font
+size</span></p>
 * Verschlüsselung (RSA)
 * private keys in der Kryptowelt
     - e.g. eliptic curve cryptography
@@ -62,7 +68,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-### Pseudocode
+# Pseudocode
 <br>
 
 ```{r, engine = 'bash', eval = FALSE}
@@ -91,25 +97,25 @@ algorithm Sieve of Eratosthenes is
     + sub-item 2 
         - sub-sub-item 1
         
-### Skript
+# Skript
 ```{r, echo = TRUE, results='markup'}
 input <- c(1:100) ; input
 ```
 
 ```{r}
 sieve <- function(n) {
-  primes <- rep(TRUE, as.integer(n))
+  primes <- rep(TRUE, n)
   primes[1] <- FALSE
   
   # zusammengesetzte Zahl
-  for (i in seq(list)) {
-    print(i)
+  for (i in seq(n)) {
+    
   }
 }
 ```
 
 
-### Big O
+# Big O
 
 
 <br>
