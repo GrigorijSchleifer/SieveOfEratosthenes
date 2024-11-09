@@ -1,0 +1,111 @@
+---
+title: 
+output:
+  html_document:
+    code_folding: show
+---
+
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# library(reticulate)
+# use_python("C:\\Users\gschleifer\AppData\Local\Microsoft\WindowsApps\python.exe")
+```
+<br>
+
+## __Sieb des Eratosthenes__ {.tabset .tabset-pills}
+<br>
+
+
+### Primzahlen {.active}
+<br>
+
+Eine Primzahl ist eine __natürliche Zahl__, die größer als 1 ist und _nur zwei Teiler hat_, nämlich __1 und die Zahl selbst__
+
+- Negative Zahlen sind keine Primzahlen
+- Mit Ausnahme der __1__ ist jede natürliche Zahl entweder eine Primzahl oder zusammengesetzt.
+
+
+### Bedeutung
+<br>
+
+### Funktionsweise
+<br>
+
+
+#### Einfachster Algorhythmus zur Bestimmung aller Primzahlen in einem vorgegebenem Zahlenraum
+
+#### Bedeutung der Primzahlen 
+
+* Verschlüsselung (RSA)
+* private keys in der Kryptowelt
+    - e.g. eliptic curve cryptography
+* Viele Primzahlen Muster vorhanden (z.B. bei Primzahlzwillingen)
+<br>
+
+![](../MWTek/Screenshot 2024-11-08 104248.png)
+
+
+
+
+<br>
+
+### Pseudocode
+<br>
+
+```{r, engine = 'bash', eval = FALSE}
+algorithm Sieve of Eratosthenes is
+    input: an integer n > 1.
+    output: all prime numbers from 2 through n.
+
+    let A be an array of Boolean values, indexed by integers 2 to n,
+    initially all set to true.
+    
+    for i = 2, 3, 4, ..., not exceeding √n do
+        if A[i] is true
+            for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n do
+                set A[j] := false
+
+    return all i such that A[i] is true.
+```
+1. Die kleinste Primzahl wird ausgewählt und alle Vielfachen davon herausgefiltert
+    - Der Prozess läuft in einer Schleife für den deffinierten Bereich
+
+* Der Filtervorgang beginnt mit der kleinsten Primzahl. Eine Primzahl ist eine natürliche Zahl, die größer als 1 ist und nur zwei Teiler hat, nämlich 1 und die Zahl selbst. Die Zahlen, die keine Primzahlen sind, heißen zusammengesetzte Zahlen.
+
+
+* unordered list
+    + sub-item 1 
+    + sub-item 2 
+        - sub-sub-item 1
+        
+### Skript
+```{r, echo = TRUE, results='markup'}
+input <- c(1:100) ; input
+```
+
+```{r}
+sieve <- function(n) {
+  primes <- rep(TRUE, as.integer(n))
+  primes[1] <- FALSE
+  
+  # zusammengesetzte Zahl
+  for (i in seq(list)) {
+    print(i)
+  }
+}
+
+
+primes_less_than(list)
+```
+
+
+### Big O
+
+
+<br>
+
+<br>
+
+
