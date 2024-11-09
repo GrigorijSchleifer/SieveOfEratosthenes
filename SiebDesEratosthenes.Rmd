@@ -21,7 +21,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Primzahlen {.active}
 <br>
 
-Eine Primzahl ist eine __natürliche Zahl__, die größer als 1 ist und _nur zwei Teiler hat_, nämlich __1 und die Zahl selbst__
+#### Eine Primzahl ist: 
+- Eine __natürliche Zahl__, die größer als 1 ist und _nur zwei Teiler hat_, nämlich __1 und die Zahl selbst__
+
+
+
+<br>
+
+![](../SieveOfEratosthenes/Screenshot 2024-11-09 at 11.09.46.png)
 
 - Negative Zahlen sind keine Primzahlen
 - Mit Ausnahme der __1__ ist jede natürliche Zahl entweder eine Primzahl oder zusammengesetzt.
@@ -29,6 +36,10 @@ Eine Primzahl ist eine __natürliche Zahl__, die größer als 1 ist und _nur zwe
 
 ### Bedeutung
 <br>
+ 
+#### Verschlüsselung 
+- Primfaktoren auch mit dem Aufkommen elektronischer Rechenmaschinen nicht effizient gefunden werden können. 
+
 
 ### Funktionsweise
 <br>
@@ -44,7 +55,7 @@ Eine Primzahl ist eine __natürliche Zahl__, die größer als 1 ist und _nur zwe
 * Viele Primzahlen Muster vorhanden (z.B. bei Primzahlzwillingen)
 <br>
 
-![](../MWTek/Screenshot 2024-11-08 104248.png)
+![](../SieveOfEratosthenes/Screenshot 2024-11-08 104248.png)
 
 
 
@@ -95,9 +106,6 @@ sieve <- function(n) {
     print(i)
   }
 }
-
-
-primes_less_than(list)
 ```
 
 
