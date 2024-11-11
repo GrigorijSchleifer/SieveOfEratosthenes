@@ -25,9 +25,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Eine Primzahl ist: 
 <br>
 
-- <p><span style="font-size:1.5em">Eine __natürliche Zahl__, die größer als 1 ist und _nur zwei Teiler hat_, nämlich __1 und die Zahl selbst__</span></p>
-- <p><span style="font-size:1.5em"> Cant be written as a product of 2 smaller integers</span></p>
+- <p><span style="font-size:1.5em">Eine __natürliche Zahl__:</span></p>
+  - <p><span style="font-size:1.2em">grösser als 1</span></p>
+  - <p><span style="font-size:1.2em">nur zwei Teiler: 1 und die Zahl selbst</span></p>
+  
+- <p><span style="font-size:1.5em">Kann nicht als Produkt von zwei kleineren Integers kalkuliert werden</span></p>
+- <p><span style="font-size:1.5em">Die Zahlen, die keine Primzahlen sind, heißen zusammengesetzte Zahlen</span></p>
 
+
+
+ <p><span style="font-size:1.5em"> ......... </span></p>
 
 <br>
 
@@ -46,15 +53,36 @@ knitr::opts_chunk$set(echo = TRUE)
         - Sicherheit im Internet
         - Asymetrische Verschlüsselung (public vs private keys)
 
-# Funktionsweise
+## __Algorithmus-Sieb von Eratosthenes__
 <br>
 
-# __Sieb des Eratosthenes__
-## Algorhythmus zur Bestimmung aller Primzahlen in einem Zahlenraum
+- <p><span style="font-size:1.5em">Liste `2 bis n` wird erstellt (1 $\neq$ Primzahl)</span></p> 
+- <p><span style="font-size:1.5em">Wir beginnen mit `x == 2`, da dies die kleinste und erste Primzahl ist</span></p>
+- <p><span style="font-size:1.5em">Die zusammengesetzten/vielfachen Zahlen der 2 werden "gesiebt"</span></p>
+- <p><span style="font-size:1.5em">Nächste Primzahl oder die kleinste nicht markierte Zahl wird gewählt</span></p>
+- <p><span style="font-size:1.5em">Die zusammengesetzten == vielfachen dieser Zahl (`x == 3`) werden "gesiebt"</span></p>
+- <p><span style="font-size:1.5em">Iteration bis der Wert von `x` kleiner oder gleich der $\sqrt{n}$</span></p>
 
-## Bedeutung der Primzahlen 
-* <p><span style="font-size:1.5em">This text should have a smaller font
-size</span></p>
+Hinweis: Die mathematische Begründung ist recht einfach. Der Zahlenbereich n kann faktorisiert werden als
+
+n=a*b
+
+
+
+Auch hier ist n =Algorithmus-Sieb von Eratosthenes*Algorithmus-Sieb von Eratosthenes
+
+= (Faktor kleiner als Algorithmus-Sieb von Eratosthenes) * (Faktor größer als Sieb des Eratosthenes-Algorithmus)
+
+Also mindestens einer der Primfaktoren oder beide müssen <= seinAlgorithmus-Sieb von Eratosthenes. Also Überquerung zu Algorithmus-Sieb von Eratosthenes wird genug sein.
+
+
+
+
+
+
+Schritt 5) Nach diesen vier Schritten wären die verbleibenden nicht markierten Zahlen alle Primzahlen in dem gegebenen Bereich n.
+## __Bedeutung der Primzahlen__
+
 * Verschlüsselung (RSA)
 * private keys in der Kryptowelt
     - e.g. eliptic curve cryptography
