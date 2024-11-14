@@ -130,24 +130,5 @@ algorithm Sieve of Eratosthenes is
 input <- c(1:100) ; input
 ```
 
-```{r}
-sieve <- function(n) {
-  primes <- rep(TRUE, n)
-  primes[1] <- FALSE
-  
-  # zusammengesetzte Zahl
-  for (i in seq(n)) {
-    
-  }
-}
-```
-
-
-# Big O
-
-
-<br>
-
-<br>
 
 
